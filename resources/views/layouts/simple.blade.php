@@ -79,7 +79,7 @@
 
     'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
   -->
-  <div id="page-container" class="sidebar-dark side-scroll page-header-fixed page-header-dark main-content-boxed">
+  <div id="page-container" class="sidebar-dark side-scroll page-header-fixed page-header-classic main-content-narrow">
 
       <!-- Sidebar -->
       <nav id="sidebar">
@@ -127,101 +127,34 @@
                 <li class="nav-main-item">
                   <a class="nav-main-link" href="bd_dashboard.html">
                     <i class="nav-main-link-icon fa fa-house-user"></i>
-                    <span class="nav-main-link-name">Dashboard</span>
+                    <span class="nav-main-link-name">Boshqaruv paneli</span>
                   </a>
                 </li>
-                <li class="nav-main-heading">Layout</li>
+                <li class="nav-main-heading">Asosiy</li>
                 <li class="nav-main-item open">
                   <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
                     <i class="nav-main-link-icon fa fa-puzzle-piece"></i>
-                    <span class="nav-main-link-name">Variations</span>
+                    <span class="nav-main-link-name">Categoriyalar</span>
                   </a>
                   <ul class="nav-main-submenu">
                     <li class="nav-main-item">
                       <a class="nav-main-link" href="bd_variations_hero_simple_1.html">
-                        <span class="nav-main-link-name">Hero Simple 1</span>
+                        <span class="nav-main-link-name">categoriya qoshish</span>
                       </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_variations_hero_simple_2.html">
-                        <span class="nav-main-link-name">Hero Simple 2</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_variations_hero_simple_3.html">
-                        <span class="nav-main-link-name">Hero Simple 3</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_variations_hero_simple_4.html">
-                        <span class="nav-main-link-name">Hero Simple 4</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_variations_hero_image_1.html">
-                        <span class="nav-main-link-name">Hero Image 1</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_variations_hero_image_2.html">
-                        <span class="nav-main-link-name">Hero Image 2</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_variations_hero_image_3.html">
-                        <span class="nav-main-link-name">Hero Image 3</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link active" href="bd_variations_hero_image_4.html">
-                        <span class="nav-main-link-name">Hero Image 4</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_variations_hero_video_1.html">
-                        <span class="nav-main-link-name">Hero Video 1</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link" href="bd_variations_hero_video_2.html">
-                        <span class="nav-main-link-name">Hero Video 2</span>
-                      </a>
-                    </li>
-                    <li class="nav-main-item">
-                      <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                        <span class="nav-main-link-name">More Options</span>
-                      </a>
-                      <ul class="nav-main-submenu">
-                        <li class="nav-main-item">
-                          <a class="nav-main-link" href="javascript:void(0)">
-                            <span class="nav-main-link-name">Another Link</span>
-                          </a>
-                        </li>
-                        <li class="nav-main-item">
-                          <a class="nav-main-link" href="javascript:void(0)">
-                            <span class="nav-main-link-name">Another Link</span>
-                          </a>
-                        </li>
-                        <li class="nav-main-item">
-                          <a class="nav-main-link" href="javascript:void(0)">
-                            <span class="nav-main-link-name">Another Link</span>
-                          </a>
-                        </li>
-                      </ul>
                     </li>
                   </ul>
                 </li>
-                <li class="nav-main-heading">Other Pages</li>
+                <li class="nav-main-heading">Boshqalar</li>
                 <li class="nav-main-item">
                   <a class="nav-main-link" href="bd_search.html">
                     <i class="nav-main-link-icon fa fa-search"></i>
-                    <span class="nav-main-link-name">Search</span>
+                    <span class="nav-main-link-name">Mualliflar</span>
                   </a>
                 </li>
                 <li class="nav-main-item">
                   <a class="nav-main-link" href="be_pages_dashboard.html">
-                    <i class="nav-main-link-icon fa fa-arrow-left"></i>
-                    <span class="nav-main-link-name">Go Back</span>
+                    <i class="nav-main-link-icon fa fa-book"></i>
+                    <span class="nav-main-link-name">Nashriyotlar</span>
                   </a>
                 </li>
               </ul>
@@ -257,35 +190,35 @@
               <li class="nav-main-item">
                 <a class="nav-main-link" href="bd_dashboard.html">
                   <i class="nav-main-link-icon fa fa-house-user"></i>
-                  <span class="nav-main-link-name">Dashboard</span>
+                  <span class="nav-main-link-name">Boshqaruv paneli</span>
                 </a>
               </li>
-              <li class="nav-main-heading">Layout</li>
+              <li class="nav-main-heading">Asosiy</li>
               <li class="nav-main-item">
                 <a class="nav-main-link active nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
                   <i class="nav-main-link-icon fa fa-puzzle-piece"></i>
-                  <span class="nav-main-link-name">Variations</span>
+                  <span class="nav-main-link-name">Kitoblar</span>
                 </a>
                 <ul class="nav-main-submenu">
                   <li class="nav-main-item">
                     <a class="nav-main-link" href="bd_variations_hero_simple_1.html">
-                      <span class="nav-main-link-name">Hero Simple 1</span>
+                      <span class="nav-main-link-name">Catrgoriyalar</span>
                     </a>
                   </li>
                   
                 </ul>
               </li>
-              <li class="nav-main-heading">Other Pages</li>
+              <li class="nav-main-heading">Boshqalar</li>
               <li class="nav-main-item">
                 <a class="nav-main-link" href="bd_search.html">
                   <i class="nav-main-link-icon fa fa-search"></i>
-                  <span class="nav-main-link-name">Search</span>
+                  <span class="nav-main-link-name">Nashriyotlar</span>
                 </a>
               </li>
               <li class="nav-main-item">
                 <a class="nav-main-link" href="be_pages_dashboard.html">
-                  <i class="nav-main-link-icon fa fa-arrow-left"></i>
-                  <span class="nav-main-link-name">Go Back</span>
+                  <i class="nav-main-link-icon fa fa-book"></i>
+                  <span class="nav-main-link-name">Hisobotlar</span>
                 </a>
               </li>
             </ul>
@@ -365,10 +298,10 @@
         <div class="content py-3">
           <div class="row fs-sm">
             <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end">
-              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="#" target="_blank">Shohruz</a>
             </div>
             <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-start">
-              <a class="fw-semibold" href="https://1.envato.market/95j" target="_blank">Codebase 5.1</a> &copy; <span data-toggle="year-copy"></span>
+              <a class="fw-semibold" href="#" target="_blank">Nurafshon</a> &copy; <span data-toggle="year-copy"></span>
             </div>
           </div>
         </div>
