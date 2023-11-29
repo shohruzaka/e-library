@@ -84,12 +84,13 @@
 
         <div class="col-sm-8">
 
-            <form action="" method="POST" >
+            <form action="{{route('category.store')}}" method="POST">
+                @csrf
                 <div class="block block-rounded">
                     <div class="block-header block-header-default">
-                        <h3 class="block-title">Yangi adabiyot qo'shish</h3>
+                        <h3 class="block-title">Yangi kategoriya qo'shish</h3>
                         <div class="block-options">
-                            <button type="submit" class="btn btn-sm btn-primary">
+                            <button type="submit" class="btn btn-sm btn-primary" name="submit">
                                 <i class="fa fa-check opacity-50 me-1"></i> Saqlash
                             </button>
                             <button type="reset" class="btn btn-sm btn-secondary">Tozalash</button>
@@ -99,14 +100,9 @@
                         <div class="row justify-content-center py-sm-3 py-md-5">
                             <div class="col-sm-10 col-md-10">
                                 <div class="mb-4">
-                                    <label class="form-label" for="block-form5-username">Kitob nomi:</label>
-                                    <input type="text" class="form-control form-control-alt" id="block-form5-username" name="block-form5-username" placeholder="Kitob nomini to'liq holda kiriting">
+                                    <label class="form-label" for="block-form5-username">Kategoriya nomi:</label>
+                                    <input type="text" class="form-control form-control-alt" id="block-form5-username" name="cat_name" placeholder="kategoriya nomini to'liq holda kiriting">
                                 </div>
-                                <div class="mb-4">
-                                    <label class="form-label" for="block-form5-username">Mualliflar nomlari:</label>
-                                    <input type="text" class="form-control form-control-alt" id="block-form5-username" name="block-form5-username" placeholder="Mualliflarni  kiriting">
-                                </div>
-                                
                             </div>
                         </div>
                     </div>

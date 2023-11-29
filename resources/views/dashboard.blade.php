@@ -11,12 +11,12 @@
       <div class="row">
         <!-- Row #1 -->
         <div class="col-6">
-          <a class="block block-rounded text-center" href="javascript:void(0)">
+          <a class="block block-rounded text-center" href="{{route('category.create')}}">
             <div class="block-content bg-gd-dusk">
               <p class="mt-2 mb-3">
                 <i class="si si-plus fa-2x text-white-75"></i>
               </p>
-              <p class="fw-semibold text-white">Yangi kategoriya</p>
+              <p class="fw-semibold text-white">Kategoriya</p>
             </div>
           </a>
         </div>

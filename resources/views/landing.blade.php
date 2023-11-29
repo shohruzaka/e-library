@@ -154,8 +154,8 @@
               <tr>
                 <th colspan="2">Introduction</th>
                 <th class="d-none d-md-table-cell text-center" style="width: 90px;">Hajmi</th>
-                <th class="d-none d-md-table-cell text-center" style="width: 90px;">Yuklab olishlar</th>
-                <th class="d-none d-md-table-cell" style="width: 180px;"> </th>
+                <th class="d-none d-md-table-cell text-center" style="width: 170px;">Yuklab olishlar</th>
+                <th class="d-none d-md-table-cell" style="width: 100px;"> </th>
               </tr>
             </thead>
             <tbody>

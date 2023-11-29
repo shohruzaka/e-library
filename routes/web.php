@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,14 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'landing');
 Route::match(['get', 'post'], '/dashboard', function(){
     return view('dashboard');
-});
+})->name('adminka');
 
-Route::resource('/books',BookController::class);        
+Route::resource('/books',BookController::class);  
+
+Route::get('/category/create', [CategoryController::class,'create'])->name('category.create');
+
+Route::post('/category/store', [CategoryController::class,'store'])->name('category.store');
+
 // Route::view('/pages/slick', 'pages.slick');
 // Route::view('/pages/datatables', 'pages.datatables');
 // Route::view('/pages/blank', 'pages.blank');

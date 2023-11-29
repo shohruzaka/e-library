@@ -125,7 +125,7 @@
               -->
               <ul class="nav-main">
                 <li class="nav-main-item">
-                  <a class="nav-main-link" href="bd_dashboard.html">
+                  <a class="nav-main-link" href="{{route('adminka')}}">
                     <i class="nav-main-link-icon fa fa-house-user"></i>
                     <span class="nav-main-link-name">Boshqaruv paneli</span>
                   </a>
