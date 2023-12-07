@@ -20,7 +20,7 @@
   <div class="row">
     <!-- Row #1 -->
     <div class="col-6 col-md-4 col-xl-2">
-      <a class="block block-rounded text-center" href="javascript:void(0)">
+      <a class="block block-rounded text-center" href="/newdashboard">
         <div class="block-content ribbon ribbon-bookmark ribbon-glass ribbon-left bg-gd-dusk">
           <div class="ribbon-box">750</div>
           <p class="mt-2 mb-3">

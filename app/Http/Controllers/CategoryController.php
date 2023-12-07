@@ -13,13 +13,21 @@ class CategoryController extends Controller
 
    public function store(Request $request){
     $request->validate([
-        'cat_name' => 'required|unique:category',
+        'cat_name' => 'required|unique:categories',
     ]);
-    $res = Category::create($request);
+    Category::create($request->all());
+       return redirect()->route('adminka')->with('success',"Kategoriy xatosiz qo'shildi"); 
+   }
 
-    if($res){
-       return redirect()->route('cabinet')->with('success',"Maqola xatosiz qo'shildi"); 
-    }
+   public function show()
+   {
+      $category=Category::all();
 
+      return;
+   }
+
+   public function destroy($id){
+      Category::destroy($id);
+       return redirect()->route('adminka')->with('success',"Kategoriya o'chirildi !"); 
    }
 }

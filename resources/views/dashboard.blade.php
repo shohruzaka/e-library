@@ -1,5 +1,25 @@
 @extends('layouts.backend')
 
+@section('js_after')
+
+<script src="{{ asset('js/lib/jquery.min.js') }}"></script>
+<script src="{{ asset('js/plugins/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
+
+@if(session('success'))
+<script>
+  Codebase.helpersOnLoad('jq-notify');
+  Codebase.helpers('jq-notify', {
+    align: 'right', // 'right', 'left', 'center'
+    from: 'top', // 'top', 'bottom'
+    type: 'info', // 'info', 'success', 'warning', 'danger'
+    icon: 'fa fa-check me-2', // Icon class
+    message: "{{ session('success') }}"
+  });
+</script>
+@endif
+
+@endsection
+
 @section('content')
 <!-- Page Content -->
 
@@ -33,53 +53,95 @@
         </div>
         <!-- END Row #1 -->
       </div>
+
       <div class="block block-themed block-rounded">
-        <div class="block-header bg-info">
-          <h3 class="block-title">
-            <i class="fa fa-fw fa-list opacity-50 me-1"></i> Kategoriyalar
-          </h3>
+        <div class="block-header bg-primary">
+          <h3 class="block-title">Kategoriylar <small>main</small></h3>
+          <div class="block-options">
+            <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modal-popin"><i class="fa fa-plus"></i> Add</button>
+          </div>
         </div>
-        <div class="block-content p-3">
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                <span><i class="fa fa-fw fa-star opacity-50 me-1"></i> News</span>
-                <span class="badge rounded-pill bg-black-50">59</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                <span><i class="fa fa-fw fa-magic opacity-50 me-1"></i> Special Offers</span>
-                <span class="badge rounded-pill bg-black-50">40</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                <span><i class="fa fa-fw fa-briefcase opacity-50 me-1"></i> Products</span>
-                <span class="badge rounded-pill bg-black-50">95</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                <span><i class="fa fa-fw fa-pencil-alt opacity-50 me-1"></i> Tutorials</span>
-                <span class="badge rounded-pill bg-black-50">25</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                <span><i class="fa fa-fw fa-book opacity-50 me-1"></i> Guides</span>
-                <span class="badge rounded-pill bg-black-50">49</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                <span><i class="far fa-fw fa-newspaper opacity-50 me-1"></i> Updates</span>
-                <span class="badge rounded-pill bg-black-50">78</span>
-              </a>
-            </li>
-          </ul>
+        <div class="block-content">
+          <table class="table table-bordered table-vcenter">
+            <thead>
+              <tr>
+                <th class="text-center" style="width: 50px;">#</th>
+                <th>Nomi</th>
+                <th class="d-none d-sm-table-cell text-center" style="width: 15%;">Kitob soni</th>
+                <th class="text-center" style="width: 100px;">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach($cat as $cat)
+              <tr>
+                <th class="text-center" scope="row">1</th>
+                <td><a href=""> {{$cat->cat_name}} </a></td>
+                <td class="d-none d-sm-table-cell text-center">
+                  15
+                </td>
+                <td class="text-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="tooltip" title="Edit">
+                      <i class="fa fa-pencil-alt"></i>
+                    </button>
+                    <form method='post' action="{{ route('category.destroy', $cat->id)}}">
+                      @csrf
+                      <button type="submit" onclick="return confirm('Ishonchingiz komilmi?')" class="btn btn-sm btn-danger" data-bs-toggle="tooltip" title="Delete">
+                        <i class="fa fa-times"></i>
+                      </button>
+
+                    </form>
+                  </div>
+                </td>
+              </tr>
+              @endforeach
+
+            </tbody>
+          </table>
         </div>
       </div>
+      <!-- Modal Pop-In -->
+      <div class="modal fade" id="modal-popin" tabindex="-1" role="dialog" aria-labelledby="modal-popin" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-popin" role="document">
+          <div class="modal-content">
+            <div class="block block-rounded shadow-none mb-0">
+              <div class="block-header block-header-default">
+                <h3 class="block-title">Yangi kategoriya yaratish</h3>
+                <div class="block-options">
+                  <button type="button" class="btn-block-option" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="block-content fs-sm">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="mb-4">
+
+                      <form action="{{route('category.store')}}" method="POST">
+                        @csrf
+                        <div class="input-group">
+                          <input type="text" name="cat_name" class="form-control" id="example-group3-input2" name="example-group3-input2" placeholder="Kategoriya nomi...">
+                          <button type="submit" class="btn btn-secondary">Qo'shish</button>
+                        </div>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-content block-content-full block-content-sm text-end border-top">
+                <button type="button" class="btn btn-alt-danger" data-bs-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Modal Pop-In -->
+
+
     </div>
 
     <div class="col-sm-8">
@@ -234,5 +296,8 @@
 
   </div>
 </div>
+
+
+
 <!-- END Page Content -->
 @endsection

@@ -93,7 +93,7 @@
             <span class="smini-visible fw-bold tracking-wide fs-lg">
               c<span class="text-primary">b</span>
             </span>
-            <a class="link-fx fw-bold tracking-wide mx-auto" href="index.html">
+            <a class="link-fx fw-bold tracking-wide mx-auto" href="{{route('home')}}">
               <span class="smini-hidden">
                 <i class="fa fa-fire text-primary"></i>
                 <span class="fs-4 text-dual">Nur</span><span class="fs-4 text-primary">afshon</span>
@@ -189,7 +189,7 @@
         <!-- Left Section -->
         <div class="d-flex align-items-center space-x-3">
           <!-- Logo -->
-          <a class="link-fx fw-semibold" href="index.html">
+          <a class="link-fx fw-semibold" href="{{route('home')}}">
             <span class="text-dual">Nur</span><span class="text-primary">afshon</span>
           </a>
           <!-- END Logo -->

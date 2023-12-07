@@ -174,7 +174,7 @@
           <!-- Left Section -->
           <div class="space-x-1">
             <!-- Logo -->
-            <a class="link-fx fw-bold" href="index.html">
+            <a class="link-fx fw-bold" href="{{route('home')}}">
               <i class="fa fa-fire text-primary"></i>
               <span class="fs-4 text-dual">e-</span><span class="fs-4 text-primary">library</span>
             </a>
@@ -188,7 +188,7 @@
             <!-- Desktop Navigation, mobile navigation can be found in #sidebar -->
             <ul class="nav-main nav-main-horizontal nav-main-hover">
               <li class="nav-main-item">
-                <a class="nav-main-link" href="bd_dashboard.html">
+                <a class="nav-main-link" href="{{route('adminka')}}">
                   <i class="nav-main-link-icon fa fa-house-user"></i>
                   <span class="nav-main-link-name">Boshqaruv paneli</span>
                 </a>
