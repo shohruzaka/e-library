@@ -1,4 +1,4 @@
-@extends('layouts.simple')
+@extends('layouts.front')
 
 @section('content')
 <!-- Hero -->
@@ -177,7 +177,7 @@
                   <a class="fw-semibold" href="javascript:void(0)">6501</a>
                 </td>
                 <td class="d-none d-md-table-cell text-center">
-                  <button type="button" class="btn btn-outline-primary">Yuklash</button>
+                  <button type="button" class="btn btn-outline-primary">Download</button>
                 </td>
               </tr>
               <tr>

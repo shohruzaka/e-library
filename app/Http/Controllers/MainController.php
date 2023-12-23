@@ -9,7 +9,7 @@ class MainController extends Controller
 {
     public function index(){
         $cat = Category::all();
-        return view('landing',['cat'=>$cat]);
+        return view('index',['cat'=>$cat]);
     }
     public function adminka(){
         $cat = Category::all();

@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('authors');
+            $table->string('lang',100);
+            $table->year('pub_date');
             $table->string('file_path',1000);
             $table->float('filesize')->nullable();
             $table->integer('downloads')->default(0);

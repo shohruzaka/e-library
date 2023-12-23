@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\BookController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BookController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\MainController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,18 +19,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Example Routes
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 
-Route::view('/newdashboard','admin.layouts.app');
-Route::get('/',[MainController::class,'index'])->name('home');
+    Route::get('/', [AdminController::class, 'index'])->name('dashboard');
+    // Books
+    Route::get('book/list', [BookController::class, 'list'])->name('book.list');
+    // Category
+    Route::get('/category/list', [CategoryController::class, 'list'])->name('category.list');
+    Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+    Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
+    Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
+    Route::post('/category/destroy/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
+});
 
-Route::match(['get', 'post'], '/dashboard', [MainController::class, 'adminka'])->name('adminka');
+Route::get('/', [MainController::class, 'index'])->name('home');
 
-Route::resource('/books',BookController::class);  
+// Route::match(['get', 'post'], '/dashboardold', [MainController::class, 'adminka'])->name('adminka');
 
-Route::get('/category/create', [CategoryController::class,'create'])->name('category.create');
+Route::resource('/books', BookController::class);
 
-Route::post('/category/store', [CategoryController::class,'store'])->name('category.store');
-Route::post('/category/destroy/{id}', [CategoryController::class,'destroy'])->name('category.destroy');
+
+
+
 // Route::view('/pages/slick', 'pages.slick');
 // Route::view('/pages/datatables', 'pages.datatables');
 // Route::view('/pages/blank', 'pages.blank');
