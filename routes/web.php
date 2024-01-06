@@ -24,6 +24,11 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::get('/', [AdminController::class, 'index'])->name('dashboard');
     // Books
     Route::get('book/list', [BookController::class, 'list'])->name('book.list');
+    Route::get('book/create', [BookController::class, 'create'])->name('book.create');
+    Route::post('book/store', [BookController::class, 'store'])->name('book.store');
+    Route::get('/book/edit/{id}', [BookController::class, 'edit'])->name('book.edit');
+    Route::get('/book/update', [BookController::class, 'update'])->name('book.update');
+    Route::post('book/destroy/{id}', [BookController::class, 'destroy'])->name('book.destroy');
     // Category
     Route::get('/category/list', [CategoryController::class, 'list'])->name('category.list');
     Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
@@ -33,10 +38,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 });
 
 Route::get('/', [MainController::class, 'index'])->name('home');
+Route::get('/download/{id}',[MainController::class,'download'])->name('download');
 
 // Route::match(['get', 'post'], '/dashboardold', [MainController::class, 'adminka'])->name('adminka');
 
-Route::resource('/books', BookController::class);
 
 
 

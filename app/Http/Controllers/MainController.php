@@ -2,17 +2,34 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Books;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MainController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $cat = Category::all();
-        return view('index',['cat'=>$cat]);
+        $books = Books::all();
+        return view('index', ['cat' => $cat, 'books' => $books]);
     }
-    public function adminka(){
+    public function adminka()
+    {
         $cat = Category::all();
-        return view('dashboard',['cat'=>$cat]);
+        return view('dashboard', ['cat' => $cat]);
+    }
+
+    public function download($id)
+    {
+        // dd($id);
+        $file = Books::find($id);
+        $file->increment('downloads',1);
+
+        $f_path = storage_path('app/' . $file->file_path);
+
+        return response()->download($f_path);
+        // return Storage::download($f_path);
     }
 }

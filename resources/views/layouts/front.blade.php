@@ -197,12 +197,12 @@
               <li class="nav-main-item">
                 <a class="nav-main-link active nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
                   <i class="nav-main-link-icon fa fa-puzzle-piece"></i>
-                  <span class="nav-main-link-name">Kitoblar</span>
+                  <span class="nav-main-link-name">O'quv materiallari</span>
                 </a>
                 <ul class="nav-main-submenu">
                   <li class="nav-main-item">
                     <a class="nav-main-link" href="bd_variations_hero_simple_1.html">
-                      <span class="nav-main-link-name">Catrgoriyalar</span>
+                      <span class="nav-main-link-name">Categoriyalar</span>
                     </a>
                   </li>
                   
@@ -212,7 +212,7 @@
               <li class="nav-main-item">
                 <a class="nav-main-link" href="bd_search.html">
                   <i class="nav-main-link-icon fa fa-search"></i>
-                  <span class="nav-main-link-name">Nashriyotlar</span>
+                  <span class="nav-main-link-name">Biz haqimizda</span>
                 </a>
               </li>
               <li class="nav-main-item">
@@ -298,7 +298,7 @@
         <div class="content py-3">
           <div class="row fs-sm">
             <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end">
-              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="#" target="_blank">Shohruz</a>
+              <i class="fa fa-wrench text-danger"></i> by <a class="fw-semibold" href="#" target="_blank">Shohruz</a>
             </div>
             <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-start">
               <a class="fw-semibold" href="#" target="_blank">Nurafshon</a> &copy; <span data-toggle="year-copy"></span>
@@ -312,6 +312,14 @@
 
   <!-- Codebase Core JS -->
   <script src="{{ mix('js/codebase.app.js') }}"></script>
+
+  <script src="{{asset('js/lib/jquery.min.js')}}"></script>    
+    <!-- Page JS Plugins -->
+    <script src="{{asset('js/plugins/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+
+    <!-- Page JS Helpers (Magnific Popup Plugin) -->
+    <script>Codebase.helpersOnLoad(['jq-magnific-popup']);</script>
+  
 
   <!-- Laravel Original JS -->
   <!-- <script src="{{ mix('js/laravel.app.js') }}"></script> -->

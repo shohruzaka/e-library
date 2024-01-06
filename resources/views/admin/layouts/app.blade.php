@@ -71,26 +71,26 @@
                         <ul class="nav-main">
                             <li class="nav-main-item">
                                 <a class="nav-main-link active" href="{{route('home')}}">
-                                    <i class="nav-main-link-icon fa fa-coffee"></i>
+                                    <i class="nav-main-link-icon fa fa-diamond"></i>
                                     <span class="nav-main-link-name">Saytga o'tish</span>
                                 </a>
                             </li>
                             <li class="nav-main-heading">Asosiy</li>
                             <li class="nav-main-item">
                                 <a class="nav-main-link" href="{{route('book.list')}}">
-                                    <i class="nav-main-link-icon fa fa-file-invoice-dollar"></i>
+                                    <i class="nav-main-link-icon fa fa-file-pdf"></i>
                                     <span class="nav-main-link-name">Kitoblar</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
                                 <a class="nav-main-link" href="{{route('category.list')}}">
-                                    <i class="nav-main-link-icon fa fa-file-invoice-dollar"></i>
+                                    <i class="nav-main-link-icon fa fa-folder-tree"></i>
                                     <span class="nav-main-link-name">Kategoriyalar</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
                                 <a class="nav-main-link" href="">
-                                    <i class="nav-main-link-icon fa fa-users"></i>
+                                    <i class="nav-main-link-icon fa fa-signature"></i>
                                     <span class="nav-main-link-name">Hikmatli so'zlar</span>
                                 </a>
                             </li>
@@ -100,12 +100,7 @@
                                     <span class="nav-main-link-name">Talabalar</span>
                                 </a>
                             </li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="">
-                                    <i class="nav-main-link-icon fa fa-layer-group"></i>
-                                    <span class="nav-main-link-name">Requests</span>
-                                </a>
-                            </li>
+
                             <li class="nav-main-heading">Settings</li>
                             <li class="nav-main-item">
                                 <a class="nav-main-link" href="">
