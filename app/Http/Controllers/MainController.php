@@ -21,11 +21,9 @@ class MainController extends Controller
         return view('pages.login');
     }
 
-    public function auth(Request $request)
+    public function auth()
     {
-       if($request->username == "admin" && $request->password == "library123"){
-        return redirect()->route('dashboard');
-       }
+       return view('admin.index');
     }
 
     public function adminka()

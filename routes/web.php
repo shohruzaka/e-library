@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BookController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\MainController;
+use App\Http\Middleware\IsAdmin;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 // Example Routes
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 
-    Route::post('/', [AdminController::class, 'index'])->name('dashboard');
+    // Route::post('/', [AdminController::class, 'index'])->name('dashboard');
     // Books
     Route::get('book/list', [BookController::class, 'list'])->name('book.list');
     Route::get('book/create', [BookController::class, 'create'])->name('book.create');
@@ -39,7 +40,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 
 Route::get('/', [MainController::class, 'index'])->name('home');
 Route::get('/login',[MainController::class,'login'])->name('login');
-Route::post('/auth',[MainController::class,'auth'])->name('auth');
+Route::post('/auth',[MainController::class,'auth'])->name('auth')->middleware(IsAdmin::class);
 Route::get('/download/{id}',[MainController::class,'download'])->name('download');
 
 // Route::match(['get', 'post'], '/dashboardold', [MainController::class, 'adminka'])->name('adminka');

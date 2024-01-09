@@ -125,7 +125,7 @@
               -->
               <ul class="nav-main">
                 <li class="nav-main-item">
-                  <a class="nav-main-link" href="{{route('dashboard')}}">
+                  <a class="nav-main-link" href="">
                     <i class="nav-main-link-icon fa fa-house-user"></i>
                     <span class="nav-main-link-name">Boshqaruv paneli</span>
                   </a>
@@ -188,9 +188,9 @@
             <!-- Desktop Navigation, mobile navigation can be found in #sidebar -->
             <ul class="nav-main nav-main-horizontal nav-main-hover">
               <li class="nav-main-item">
-                <a class="nav-main-link" href="{{route('dashboard')}}">
+                <a class="nav-main-link" href="#">
                   <i class="nav-main-link-icon fa fa-house-user"></i>
-                  <span class="nav-main-link-name">Boshqaruv paneli</span>
+                  <span class="nav-main-link-name">Bosh sahifa</span>
                 </a>
               </li>
               <li class="nav-main-heading">Asosiy</li>
@@ -211,7 +211,7 @@
               <li class="nav-main-heading">Boshqalar</li>
               <li class="nav-main-item">
                 <a class="nav-main-link" href="bd_search.html">
-                  <i class="nav-main-link-icon fa fa-search"></i>
+                  <i class="nav-main-link-icon fa fa-link"></i>
                   <span class="nav-main-link-name">Biz haqimizda</span>
                 </a>
               </li>
