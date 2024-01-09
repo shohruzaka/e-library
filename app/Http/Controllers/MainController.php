@@ -12,9 +12,22 @@ class MainController extends Controller
     public function index()
     {
         $cat = Category::all();
-        $books = Books::all();
+        $books = Books::paginate(3);
         return view('index', ['cat' => $cat, 'books' => $books]);
     }
+
+    public function login()
+    {
+        return view('pages.login');
+    }
+
+    public function auth(Request $request)
+    {
+       if($request->username == "admin" && $request->password == "library123"){
+        return redirect()->route('dashboard');
+       }
+    }
+
     public function adminka()
     {
         $cat = Category::all();
@@ -25,7 +38,7 @@ class MainController extends Controller
     {
         // dd($id);
         $file = Books::find($id);
-        $file->increment('downloads',1);
+        $file->increment('downloads', 1);
 
         $f_path = storage_path('app/' . $file->file_path);
 

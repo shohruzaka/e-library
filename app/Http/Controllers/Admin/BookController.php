@@ -28,9 +28,17 @@ class BookController extends Controller
         return view('admin.book.edit', ['book' => $book, 'cat' => $cat]);
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        dd($request);
+        $request->validate([
+            'book_name' => 'required',
+            'authors' => 'required',
+            'lang' => 'required|in:Uz,Eng,Ru',
+            'pub_date' => 'required',
+            'category_id' => 'required|integer',
+            // 'fayl' => 'file|required|mimes:pdf,doc,docx,rtf'
+        ]);
+        dd($id);
     }
 
     public function store(Request $request)

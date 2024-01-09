@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="block-content ps-7">
-            <form action="{{route('book.update')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('book.update',$book->id)}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
                     @if ($errors->any())
@@ -22,7 +22,7 @@
                         <ul>
                             @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
-                            @endforeach
+                            @endforeach 
                         </ul>
                     </div>
                     @endif
@@ -77,7 +77,7 @@
 
                         <div class="mb-4">
                             <button type="submit" class="btn btn-primary">
-                                <i class="fa fa-file opacity-50 me-1"></i> Saqlash
+                                <i class="fa fa-file opacity-50 me-1"></i> O'zgartirish
                             </button>
                         </div>
 

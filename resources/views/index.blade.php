@@ -9,9 +9,9 @@
 <div class="bg-image bg-image-bottom" style="background-image: url('media/photos/library.jpg');">
   <div class="bg-primary-dark-op">
     <div class="content text-center">
-      <div class="pt-5 pb-3">
+      <div class="py-5">
         <h1 class="h2 fw-bold text-white mb-2">E-Library</h1>
-        <h2 class="h5 fw-medium text-white-75">Muhammad al-Xorazmiy nomidagi TATU Nurafshon filiali elektron kutubxonasi!</h2>
+        <h2 class="h5 fw-medium text-white">Muhammad al-Xorazmiy nomidagi TATU Nurafshon filiali elektron kutubxonasi!</h2>
       </div>
     </div>
   </div>
@@ -25,9 +25,9 @@
     <div class="col-md-6 col-xl-3">
       <a class="block block-rounded block-transparent" href="javascript:void(0)">
         <div class="block-content block-content-full text-end bg-image" style="background-image: url('media/photos/ilmiy.jpg');">
-          <div class="py-5 text-center bg-black-25">
+          <div class="py-5 text-center bg-black-50">
             <div class="fs-2 fw-bold mb-0 text-white">1020</div>
-            <div class="fs-sm fw-semibold text-uppercase text-white-75">Badiiy adabiyotlar</div>
+            <div class="fs-sm fw-semibold text-uppercase text-white">Badiiy adabiyotlar</div>
           </div>
         </div>
       </a>
@@ -35,9 +35,9 @@
     <div class="col-md-6 col-xl-3">
       <a class="block block-rounded block-transparent" href="javascript:void(0)">
         <div class="block-content block-content-full text-end bg-image" style="background-image: url('media/photos/badiiy.jpg');">
-          <div class="py-5 text-center bg-black-25">
+          <div class="py-5 text-center bg-black-50">
             <div class="fs-2 fw-bold mb-0 text-white">52</div>
-            <div class="fs-sm fw-semibold text-uppercase text-white-75">Ilmiy adabiyotlar</div>
+            <div class="fs-sm fw-semibold text-uppercase text-white">Ilmiy adabiyotlar</div>
           </div>
         </div>
       </a>
@@ -46,9 +46,9 @@
     <div class="col-md-6 col-xl-3">
       <a class="block block-rounded block-transparent" href="javascript:void(0)">
         <div class="block-content block-content-full text-end bg-image" style="background-image: url('media/photos/oquv.jpg');">
-          <div class="py-5 text-center bg-black-25">
+          <div class="py-5 text-center bg-black-50">
             <div class="fs-2 fw-bold mb-0 text-white">522</div>
-            <div class="fs-sm fw-semibold text-uppercase text-white-75">O'quv adabiyotlar</div>
+            <div class="fs-sm fw-semibold text-uppercase text-white">O'quv adabiyotlar</div>
           </div>
         </div>
       </a>
@@ -57,26 +57,25 @@
     <div class="col-md-6 col-xl-3">
       <a class="block block-rounded block-transparent" href="javascript:void(0)">
         <div class="block-content block-content-full text-end bg-image" style="background-image: url('media/photos/maqola.jpg');">
-          <div class="py-5 text-center bg-black-25">
+          <div class="py-5 text-center bg-black-50">
             <div class="fs-2 fw-bold mb-0 text-white">215</div>
-            <div class="fs-sm fw-semibold text-uppercase text-white-75">Ilmiy maqolalar</div>
+            <div class="fs-sm fw-semibold text-uppercase text-white">Ilmiy maqolalar</div>
           </div>
         </div>
       </a>
     </div>
-    
 
   </div>
 
-  
+
 
   <div class="row">
 
     <div class="col-sm-4">
-      <div class="block block-rounded">
-        <div class="block-header block-header-default">
+      <div class="block block-themed block-rounded">
+        <div class="block-header bg-gd-sun">
           <h3 class="block-title">
-            <i class="fa fa-fw fa-list opacity-50 me-1"></i> Bo'limlar
+            <i class="fa fa-fw fa-circle me-1"></i> Bo'limlar
           </h3>
         </div>
         <div class="block-content p-3">
@@ -93,11 +92,23 @@
         </div>
       </div>
 
+      <div class="block block-themed block-rounded">
+        <div class="block-header bg-pulse">
+          <h3 class="block-title"><i class="fa fa fa-signature me-1"></i>Buyuklar bisotidan</h3>
+        </div>
+        <div class="block-content">
+          <blockquote class="blockquote">
+            <p>Don't cry because it's over, smile because it happened.</p>
+            <footer class="blockquote-footer">Dr. Seuss</footer>
+          </blockquote>
+        </div>
+      </div>
+
       <div class="block block-rounded">
         <div class="block-content block-content-full d-flex align-items-center justify-content-between bg-primary">
           <div class="me-1">
             <p class="fs-lg fw-semibold text-white mb-0">
-              Kutubxona life
+              Kutubxona
             </p>
             <p class="fs-sm text-uppercase fw-semibold text-white-75 mb-0">
               fotolavhalar
@@ -145,11 +156,15 @@
           <!-- END Simple Gallery -->
         </div>
       </div>
+
+
+
+
     </div>
 
     <div class="col-sm-8">
       <div class="block block-themed block-rounded">
-        <div class="block-header bg-flat-dark">
+        <div class="block-header bg-gd-sea">
           <h3 class="block-title">Adabiyotlar</h3>
           <div class="block-options">
             <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle"></button>
@@ -203,19 +218,13 @@
 
         </div>
         <div class="block-content block-content-full block-content-sm bg-body-light fs-sm">
-          Footer content..
+         {{ $books->links() }}
         </div>
       </div>
 
     </div>
 
-    <div class="col-12">
-      <div class="block block-rounded">
-        <div class="block-content">
-          <p class="text-center py-7">...</p>
-        </div>
-      </div>
-    </div>
+
   </div>
   <!-- END Dummy content -->
 </div>
