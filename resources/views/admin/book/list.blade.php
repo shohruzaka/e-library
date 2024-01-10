@@ -90,7 +90,7 @@
             <!-- END Support Category -->
         </div>
         <div class="block-content block-content-full block-content-sm bg-body-light text-end">
-                {{ $books->links() }}
+            {{ $books->links() }}
         </div>
     </div>
 </div>

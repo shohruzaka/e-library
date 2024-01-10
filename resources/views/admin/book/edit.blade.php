@@ -14,8 +14,11 @@
             </div>
         </div>
         <div class="block-content ps-7">
-            <form action="{{route('book.update',$book->id)}}" method="post" enctype="multipart/form-data">
-                @csrf
+            
+            <form action="{{route('book.update',$book->id)}}" method="POST" enctype="multipart/form-data">
+            @method('PUT')    
+            @csrf
+              
                 <div class="row">
                     @if ($errors->any())
                     <div class="alert alert-danger">

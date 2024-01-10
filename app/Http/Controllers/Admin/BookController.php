@@ -31,19 +31,35 @@ class BookController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'book_name' => 'required',
+            'title' => 'required',
             'authors' => 'required',
             'lang' => 'required|in:Uz,Eng,Ru',
             'pub_date' => 'required',
-            'category_id' => 'required|integer',
+            'cat_id' => 'required|integer',
+            'fayl' => 'file|mimes:pdf,doc,docx,rtf'
             // 'fayl' => 'file|required|mimes:pdf,doc,docx,rtf'
         ]);
-        dd($id);
+        $book = Books::find($id);
+        $data = $request->all();
+        
+
+        if ($request->hasFile('fayl')) {
+            $folder = Category::find($data['cat_id']);
+            $or_name = date('dmY') . '-' . $request->file('fayl')->getClientOriginalName();
+            $data['fayl'] = $request->file('fayl')->storeAs("public/books/{$folder['cat_name']}", $or_name);
+            $data['filesize'] = Storage::size($data['fayl']) / 1048576;
+        }
+
+        $book->update($data);
+        if ($book) {
+            return redirect()->route('book.list')->with('success', "O'zgartirishlar saqlandi");
+        }
+
     }
 
     public function store(Request $request)
     {
-        //   dd($request);
+        dd($request);
         $request->validate([
             'book_name' => 'required',
             'authors' => 'required',
@@ -57,8 +73,8 @@ class BookController extends Controller
 
         if ($request->hasFile('fayl')) {
             $folder = Category::find($data['category_id']);
-            $or_name = date('dmY').'-'.$request->file('fayl')->getClientOriginalName();
-            $data['fayl'] = $request->file('fayl')->storeAs("public/books/{$folder['cat_name']}",$or_name);
+            $or_name = date('dmY') . '-' . $request->file('fayl')->getClientOriginalName();
+            $data['fayl'] = $request->file('fayl')->storeAs("public/books/{$folder['cat_name']}", $or_name);
             $data['filesize'] = Storage::size($data['fayl']) / 1048576;
         }
         $book = Books::create([
