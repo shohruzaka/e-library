@@ -22,9 +22,7 @@
 
 @section('content')
 <div class="content">
-<<<<<<< HEAD
     <div class="block block-themed block-rounded">
-
         <div class="block-header bg-info">
             <h3 class="block-title">Adabiyotlar</h3>
             <div class="block-options">
@@ -94,9 +92,6 @@
             {{ $books->links() }}
         </div>
     </div>
-=======
-    
->>>>>>> 576cfeabc213262e28fed5b2fe63f9a6f11b6374
 </div>
 
 @endsection

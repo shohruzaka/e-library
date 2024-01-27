@@ -41,7 +41,6 @@ class BookController extends Controller
         ]);
         $book = Books::find($id);
         $data = $request->all();
-        
 
         if ($request->hasFile('fayl')) {
             $folder = Category::find($data['cat_id']);
