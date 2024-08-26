@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap">
     <link rel="stylesheet" id="css-main" href="{{ mix('/css/codebase.css') }}">
-    
+
 
     @yield('css_after')
 </head>
@@ -36,9 +36,6 @@
                 <div class="content-header justify-content-lg-center bg-black-10">
                     <!-- Logo -->
                     <div>
-                        <span class="smini-visible fw-bold tracking-wide fs-lg">
-                            S<span class="text-primary">H</span>
-                        </span>
                         <a class="link-fx fw-bold tracking-wide mx-auto" href="index.html">
                             <span class="smini-hidden">
                                 <i class="fa fa-fire text-primary"></i>
@@ -64,64 +61,28 @@
 
                         <ul class="nav-main">
                             <li class="nav-main-item">
-                                <a class="nav-main-link active" href="gs_landing.html">
+                                <a class="nav-main-link active" href="/">
                                     <i class="nav-main-link-icon fa fa-home"></i>
-                                    <span class="nav-main-link-name">Home</span>
+                                    <span class="nav-main-link-name">Bosh sahifa</span>
                                 </a>
                             </li>
-                            <li class="nav-main-heading">Heading</li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                                    <i class="nav-main-link-icon fa fa-puzzle-piece"></i>
-                                    <span class="nav-main-link-name">Dropdown</span>
-                                </a>
-                                <ul class="nav-main-submenu">
-                                    <li class="nav-main-item">
-                                        <a class="nav-main-link" href="javascript:void(0)">
-                                            <span class="nav-main-link-name">Link #1</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-main-item">
-                                        <a class="nav-main-link" href="javascript:void(0)">
-                                            <span class="nav-main-link-name">Link #2</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-main-item">
-                                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                                            <span class="nav-main-link-name">Dropdown</span>
-                                        </a>
-                                        <ul class="nav-main-submenu">
-                                            <li class="nav-main-item">
-                                                <a class="nav-main-link" href="javascript:void(0)">
-                                                    <span class="nav-main-link-name">Link #1</span>
-                                                </a>
-                                            </li>
-                                            <li class="nav-main-item">
-                                                <a class="nav-main-link" href="javascript:void(0)">
-                                                    <span class="nav-main-link-name">Link #2</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-main-heading">Vital</li>
+
                             <li class="nav-main-item">
                                 <a class="nav-main-link" href="javascript:void(0)">
-                                    <i class="nav-main-link-icon fa fa-wrench"></i>
-                                    <span class="nav-main-link-name">Page</span>
+                                    <i class="nav-main-link-icon fa fa-medal"></i>
+                                    <span class="nav-main-link-name">Kitobxon talaba</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
                                 <a class="nav-main-link" href="javascript:void(0)">
-                                    <i class="nav-main-link-icon fa fa-wrench"></i>
-                                    <span class="nav-main-link-name">Page</span>
+                                    <i class="nav-main-link-icon fa fa-compass"></i>
+                                    <span class="nav-main-link-name">Biz haqimizda</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
                                 <a class="nav-main-link" href="javascript:void(0)">
-                                    <i class="nav-main-link-icon fa fa-wrench"></i>
-                                    <span class="nav-main-link-name">Shohruz</span>
+                                    <i class="nav-main-link-icon fa fa-book"></i>
+                                    <span class="nav-main-link-name">Yangi adabiyotlar</span>
                                 </a>
                             </li>
                         </ul>
@@ -154,64 +115,28 @@
 
                     <ul class="nav-main nav-main-horizontal nav-main-hover d-none d-lg-block">
                         <li class="nav-main-item">
-                            <a class="nav-main-link active" href="gs_landing.html">
+                            <a class="nav-main-link active" href="/">
                                 <i class="nav-main-link-icon fa fa-home"></i>
-                                <span class="nav-main-link-name">Home</span>
+                                <span class="nav-main-link-name">Bosh sahifa</span>
                             </a>
                         </li>
-                        <li class="nav-main-heading">Heading</li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                                <i class="nav-main-link-icon fa fa-puzzle-piece"></i>
-                                <span class="nav-main-link-name">Dropdown</span>
-                            </a>
-                            <ul class="nav-main-submenu">
-                                <li class="nav-main-item">
-                                    <a class="nav-main-link" href="javascript:void(0)">
-                                        <span class="nav-main-link-name">Link #1</span>
-                                    </a>
-                                </li>
-                                <li class="nav-main-item">
-                                    <a class="nav-main-link" href="javascript:void(0)">
-                                        <span class="nav-main-link-name">Link #2</span>
-                                    </a>
-                                </li>
-                                <li class="nav-main-item">
-                                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                                        <span class="nav-main-link-name">Dropdown</span>
-                                    </a>
-                                    <ul class="nav-main-submenu">
-                                        <li class="nav-main-item">
-                                            <a class="nav-main-link" href="javascript:void(0)">
-                                                <span class="nav-main-link-name">Link #1</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-main-item">
-                                            <a class="nav-main-link" href="javascript:void(0)">
-                                                <span class="nav-main-link-name">Link #2</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-main-heading">Vital</li>
+
                         <li class="nav-main-item">
                             <a class="nav-main-link" href="javascript:void(0)">
-                                <i class="nav-main-link-icon fa fa-wrench"></i>
-                                <span class="nav-main-link-name">Page</span>
+                                <i class="nav-main-link-icon fa fa-medal"></i>
+                                <span class="nav-main-link-name">Kitobxon talaba</span>
                             </a>
                         </li>
                         <li class="nav-main-item">
                             <a class="nav-main-link" href="javascript:void(0)">
-                                <i class="nav-main-link-icon fa fa-wrench"></i>
-                                <span class="nav-main-link-name">Page</span>
+                                <i class="nav-main-link-icon fa fa-compass"></i>
+                                <span class="nav-main-link-name">Biz haqimizda</span>
                             </a>
                         </li>
                         <li class="nav-main-item">
                             <a class="nav-main-link" href="javascript:void(0)">
-                                <i class="nav-main-link-icon fa fa-wrench"></i>
-                                <span class="nav-main-link-name">Page</span>
+                                <i class="nav-main-link-icon fa fa-book"></i>
+                                <span class="nav-main-link-name">Yangi adabiyotlar</span>
                             </a>
                         </li>
                     </ul>
