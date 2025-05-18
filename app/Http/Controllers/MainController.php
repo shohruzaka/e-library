@@ -12,7 +12,7 @@ class MainController extends Controller
     public function index()
     {
         $cat = Category::all();
-        $books = Books::paginate(3);
+        $books = Books::paginate(10);
         return view('index', ['cat' => $cat, 'books' => $books]);
     }
 

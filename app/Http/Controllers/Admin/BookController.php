@@ -12,7 +12,7 @@ class BookController extends Controller
 {
     public function list()
     {
-        $books = Books::paginate(3);
+        $books = Books::paginate(15);
         return view('admin.book.list', ['books' => $books]);
     }
     public function create()

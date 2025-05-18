@@ -96,8 +96,8 @@
         </div>
         <div class="block-content">
           <blockquote class="blockquote">
-            <p>Don't cry because it's over, smile because it happened.</p>
-            <footer class="blockquote-footer">Dr. Seuss</footer>
+            <p>Yaxshi kitoblarni bugun oʻqing, yomon kitoblarni oʻqishga ertaga albatta vaqt topiladi..</p>
+            <footer class="blockquote-footer">Isaak Barrou</footer>
           </blockquote>
         </div>
       </div>
@@ -117,28 +117,32 @@
               <tr>
                 <th class="text-center">#</th>
                 <th colspan="2">Nomi</th>
-                <th class="d-none d-sm-table-cell" style="width: 15%;">Access</th>
+                <th class="d-none d-sm-table-cell" style="width: 15%;">Bo'lim</th>
                 <th class="text-center" style="width: 15%;"> </th>
               </tr>
             </thead>
             <tbody>
+              @foreach ($books as $book)
               <tr>
-                <td class="text-center">1</td>
-                <td colspan="2" class="fw-semibold">Justin Hunt</td>
-
+                <td class="text-center">{{ $book->id }}</td>
+                <td colspan="2" class="fw-semibold">{{ $book->title }}</td>
                 <td class="d-none d-sm-table-cell">
-                  <span class="badge bg-info">Business</span>
+                  <span class="badge bg-info">{{ $book->authors }}</span>
                 </td>
                 <td class="text-center">
-                  <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="tooltip" title="View Customer">
-                    <i class="fa fa-user"></i>
-                  </button>
+                    <a href="{{ route('download',$book->id) }}" type="button" class="btn btn-sm btn-secondary" data-bs-toggle="tooltip" title="download" download>
+                    <i class="fa fa-download"></i>
+                    </a>
                 </td>
               </tr>
+              @endforeach
 
             </tbody>
           </table>
         </div>
+      </div>
+      <div>
+      {{ $books->links() }}
       </div>
     </div>
   </div>
