@@ -89,7 +89,7 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="">
+                                <a class="nav-main-link" href="{{route('aphorism.list')}}">
                                     <i class="nav-main-link-icon fa fa-signature"></i>
                                     <span class="nav-main-link-name">Hikmatli so'zlar</span>
                                 </a>

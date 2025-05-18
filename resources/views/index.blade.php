@@ -27,8 +27,8 @@
       <a class="block block-rounded block-transparent" href="javascript:void(0)">
         <div class="block-content block-content-full text-end bg-image" style="background-image: url('media/photos/ilmiy.jpg');">
           <div class="py-5 text-center bg-black-50">
-            <div class="fs-2 fw-bold mb-0 text-white">1020</div>
-            <div class="fs-sm fw-semibold text-uppercase text-white">Badiiy adabiyotlar</div>
+            <div class="fs-2 fw-bold mb-0 text-white">{{$booksCount}}</div>
+            <div class="fs-sm fw-semibold text-uppercase text-white">Jami adabiyotlar</div>
           </div>
         </div>
       </a>
@@ -81,7 +81,7 @@
             @foreach ($cat as $cat)
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center justify-content-between" href="#">
-                <span><i class="fa fa-fw fa-folder me-3"></i>{{$cat->cat_name}}</span>
+                <span><i class="fa fa-fw fa-folder me-3"></i>{{$cat->cat_name}} ({{$cat->books_count}})</span>
                 <!-- <span class="badge rounded-pill bg-black-50">59</span> -->
               </a>
             </li>
@@ -96,53 +96,74 @@
         </div>
         <div class="block-content">
           <blockquote class="blockquote">
-            <p>Yaxshi kitoblarni bugun oʻqing, yomon kitoblarni oʻqishga ertaga albatta vaqt topiladi..</p>
-            <footer class="blockquote-footer">Isaak Barrou</footer>
+            <p>{{ $aphorism->text ?? '' }}</p>
+            <footer class="blockquote-footer">{{ $aphorism->author ?? '' }}</footer>
           </blockquote>
         </div>
       </div>
     </div>
 
     <div class="col-sm-8">
-      <div class="block block-rounded">
-        <div class="block-header block-header-default">
-          <h3 class="block-title">
-            Adabiyotlar
-          </h3>
+      <div class="block block-themed block-rounded">
+        <div class="block-header bg-info">
+          <h3 class="block-title">Adabiyotlar</h3>
+          <div class="block-options">
+            <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle"></button>
+            <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+              <i class="si si-refresh"></i>
+            </button>
+          </div>
         </div>
-        <div class="block-content block-content-full">
-          <!-- DataTables functionality is initialized with .js-dataTable-simple class in js/pages/be_tables_datatables.min.js which was auto compiled from _js/pages/be_tables_datatables.js -->
-          <table class="table table-bordered table-striped table-vcenter js-dataTable-simple">
-            <thead>
+
+        <div class="block-content pt-1">
+          <!-- Intro Category -->
+          <table class="table table-striped table-borderless table-vcenter py-0">
+            <thead class="thead-light">
               <tr>
-                <th class="text-center">#</th>
-                <th colspan="2">Nomi</th>
-                <th class="d-none d-sm-table-cell" style="width: 15%;">Bo'lim</th>
-                <th class="text-center" style="width: 15%;"> </th>
+                <th class="d-none d-md-table-cell text-center">ID</th>
+                <th colspan="2">Adabiyot nomi</th>
+                <th class="d-none d-md-table-cell text-center" style="width: 120px;">Yuklab olishlar</th>
+                <th class="d-none d-md-table-cell text-center" style="width: 150px;">Action</th>
               </tr>
             </thead>
             <tbody>
-              @foreach ($books as $book)
+              @foreach($books as $book)
               <tr>
-                <td class="text-center">{{ $book->id }}</td>
-                <td colspan="2" class="fw-semibold">{{ $book->title }}</td>
-                <td class="d-none d-sm-table-cell">
-                  <span class="badge bg-info">{{ $book->authors }}</span>
-                </td>
                 <td class="text-center">
-                    <a href="{{ route('download',$book->id) }}" type="button" class="btn btn-sm btn-secondary" data-bs-toggle="tooltip" title="download" download>
+                  <div class="fs-sm text-muted">
+                    <strong class="fw-semibold">{{$book['id']}}</strong>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <a class="fs-5 fw-semibold" href="#">{{$book['title']}}</a>
+                  <!-- <div class="text-muted my-1">Introduce yourself to our community</div> -->
+                  <div class="fs-sm text-muted">
+                    <strong class="fw-semibold">Mualliflar:</strong> <a href="#" class="me-3">{{$book->authors}}</a>
+                    <strong class="fw-semibold">Resurs tili:</strong> <a href="#" class="me-3">{{$book->lang}}</a>
+                    <strong class="fw-light">hajmi: {{$book->filesize}} MB</strong>
+                    <!-- <strong class="fw-light">{{$book->pub_date}}</strong> -->
+                  </div>
+
+                </td>
+
+                <td class="d-none d-md-table-cell text-center">
+                  <a class="fw-semibold" href="#">{{$book->downloads}}</a>
+                </td>
+                <td class="d-none d-md-table-cell text-center">
+                  <a class="btn btn-sm btn-primary" href="{{route('download',[$book->id])}}">
                     <i class="fa fa-download"></i>
-                    </a>
+                  </a>
                 </td>
               </tr>
               @endforeach
-
             </tbody>
           </table>
+          <!-- END Intro Category -->
+          <!-- END Support Category -->
         </div>
-      </div>
-      <div>
-      {{ $books->links() }}
+        <div class="block-content block-content-full block-content-sm bg-body-light text-end">
+          {{ $books->links() }}
+        </div>
       </div>
     </div>
   </div>

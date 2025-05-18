@@ -34,4 +34,13 @@ class CategoryController extends Controller
         Category::destroy($id);
         return redirect()->route('category.list')->with('success', "Kategoriya o'chirildi !");
     }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'cat_name' => 'required|unique:categories,cat_name,' . $id,
+        ]);
+        Category::find($id)->update($request->all());
+        return redirect()->route('category.list')->with('success', "Kategoriy xatosiz yangilandi");
+    }
 }

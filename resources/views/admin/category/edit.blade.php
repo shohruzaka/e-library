@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="content">
-    <form action="" method="POST">
+    <form action="{{ route('category.update',$cat->id) }}" method="POST">
+        @csrf
+        @method('PUT')
         <div class="block block-rounded">
             <div class="block-header block-header-default">
                 <h3 class="block-title">Tahrirlash</h3>
