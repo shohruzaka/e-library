@@ -21,17 +21,7 @@ class MainController extends Controller
 
     
 
-    public function login()
-    {
-        return view('pages.login');
-    }
-
-    public function auth()
-    {
-       return view('admin.index');
-    }
-
-    public function adminka()
+    public function dashboard()
     {
         $cat = Category::all();
         return view('dashboard', ['cat' => $cat]);

@@ -18,10 +18,9 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         DB::table('users')->insert([
-            'username' => 'Library',
+            'name' => 'Library',
             'email' => 'admin@nbtuit.uz',
             'password' => Hash::make('library2233'),
-            'is_admin' => 1,
         ]);
     }
 }

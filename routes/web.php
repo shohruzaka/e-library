@@ -53,7 +53,7 @@ Route::get('/download/{id}', [MainController::class, 'download'])->name('downloa
 
 Route::match(['get', 'post'], '/dashboard', function () {
     return view('admin.dashboard');
-})->middleware(['auth']);
+})->middleware(['auth'])->name('dashboard');
 
 // Route::match(['get', 'post'], '/dashboardold', [MainController::class, 'adminka'])->name('adminka');
 

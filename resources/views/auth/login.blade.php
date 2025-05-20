@@ -56,8 +56,8 @@
                                         <div class="row">
                                             <div class="col-sm-6 d-sm-flex align-items-center push">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="login-remember-me" name="login-remember-me">
-                                                    <label class="form-check-label" for="login-remember-me">Remember Me</label>
+                                                    <input class="form-check-input" type="checkbox"  id="remember" name="remember">
+                                                    <label class="form-check-label" for="remember">Remember Me</label>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 text-sm-end push">

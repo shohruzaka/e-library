@@ -86,7 +86,7 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{route('login')}}">
+                                <a class="nav-main-link" href="{{route('dashboard')}}">
                                     <i class="nav-main-link-icon fa fa-briefcase"></i>
                                     <span class="nav-main-link-name">Kabinet</span>
                                 </a>
@@ -146,7 +146,7 @@
                             </a>
                         </li>
                         <li class="nav-main-item">
-                            <a class="nav-main-link" href="{{route('login')}}">
+                            <a class="nav-main-link" href="{{route('dashboard')}}">
                                 <i class="nav-main-link-icon fa fa-briefcase"></i>
                                 <span class="nav-main-link-name">Kabinet</span>
                             </a>

@@ -28,7 +28,7 @@
 <body>
     <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed main-content-narrow">
         <!-- Side Overlay-->
-       
+
         <!-- END Side Overlay -->
 
         <!-- Sidebar -->
@@ -190,10 +190,13 @@
                                 <!-- END Side Overlay -->
 
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item d-flex align-items-center justify-content-between space-x-1" href="op_auth_signin.html">
-                                    <span>Sign Out</span>
-                                    <i class="fa fa-fw fa-sign-out-alt opacity-25"></i>
-                                </a>
+                                <form action="{{route('logout')}}" method="POST">
+                                    @csrf
+                                    <button class="dropdown-item d-flex align-items-center justify-content-between space-x-1">
+                                        <span>Sign Out</span>
+                                        <i class="fa fa-fw fa-sign-out-alt opacity-25"></i>
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -240,7 +243,7 @@
         <!-- Main Container -->
         <main id="main-container">
             <!-- Page Content -->
-          @yield('content')
+            @yield('content')
             <!-- END Page Content -->
         </main>
         <!-- END Main Container -->
@@ -250,7 +253,7 @@
             <div class="content py-3">
                 <div class="row fs-sm">
                     <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end">
-                        <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" >Muzaffar</a>
+                        <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold">Muzaffar</a>
                     </div>
                     <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-start">
                         <a class="fw-semibold">e-library 1.0</a> &copy; <span data-toggle="year-copy"></span>
@@ -261,8 +264,8 @@
         <!-- END Footer -->
     </div>
     <!-- END Page Container -->
-   
-   
+
+
     <script src="{{ mix('js/codebase.app.js') }}"></script>
 
     @yield('js_after')
