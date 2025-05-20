@@ -85,6 +85,12 @@
                                     <span class="nav-main-link-name">Yangi adabiyotlar</span>
                                 </a>
                             </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link" href="{{route('login')}}">
+                                    <i class="nav-main-link-icon fa fa-briefcase"></i>
+                                    <span class="nav-main-link-name">Kabinet</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <!-- END Side Main Navigation -->
@@ -137,6 +143,12 @@
                             <a class="nav-main-link" href="javascript:void(0)">
                                 <i class="nav-main-link-icon fa fa-book"></i>
                                 <span class="nav-main-link-name">Yangi adabiyotlar</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="{{route('login')}}">
+                                <i class="nav-main-link-icon fa fa-briefcase"></i>
+                                <span class="nav-main-link-name">Kabinet</span>
                             </a>
                         </li>
                     </ul>

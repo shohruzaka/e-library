@@ -38,7 +38,7 @@
                             <!-- END Header -->
 
 
-                            <form class="js-validation-signin" action="{{route('auth')}}" method="POST">
+                            <form class="js-validation-signin" action="{{route('login')}}" method="POST">
                                 @csrf
                                 <div class="block block-themed block-rounded block-fx-shadow">
                                     <div class="block-header bg-gd-dusk">
@@ -46,8 +46,8 @@
                                     </div>
                                     <div class="block-content">
                                         <div class="form-floating mb-4">
-                                            <input type="text" class="form-control" id="login-username" name="username" placeholder=" ">
-                                            <label class="form-label" for="login-username">Login</label>
+                                            <input type="email" class="form-control" id="login-username" name="email" placeholder=" ">
+                                            <label class="form-label" for="login-username">E-mail</label>
                                         </div>
                                         <div class="form-floating mb-4">
                                             <input type="password" class="form-control" id="login-password" name="password" placeholder=" ">

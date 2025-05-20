@@ -49,9 +49,11 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 });
 
 Route::get('/', [MainController::class, 'index'])->name('home');
-Route::get('/login', [MainController::class, 'login'])->name('login');
-Route::post('/auth', [MainController::class, 'auth'])->name('auth')->middleware(IsAdmin::class);
 Route::get('/download/{id}', [MainController::class, 'download'])->name('download');
+
+Route::match(['get', 'post'], '/dashboard', function () {
+    return view('admin.dashboard');
+})->middleware(['auth']);
 
 // Route::match(['get', 'post'], '/dashboardold', [MainController::class, 'adminka'])->name('adminka');
 
